@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <title>GDC (A) Siddipet | Government Degree College (Autonomous), Siddipet</title>
+  <!-- SEO & accessibility -->
+  <meta name="description" content="Official website of Government Degree College (Autonomous), Siddipet – established 1956, affiliated to Osmania University. Hall tickets, fee receipts, results, departments, admissions, and faculty.">
+  <meta name="theme-color" content="#003366">
+  <!-- Google Fonts + Font Awesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* ---------- RESET & VARIABLES ---------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    :root {
+      --primary: #003366;
+      --primary-light: #e6f0ff;
+      --accent: #f4b400;
+      --gray-bg: #f8fafc;
+      --text-dark: #1e2b37;
+      --text-soft: #2d3e4f;
+      --white: #ffffff;
+      --shadow: 0 8px 20px rgba(0,0,0,0.05), 0 2px 6px rgba(0,40,80,0.1);
+      --border-radius: 1rem;
+      --max-width: 1280px;
+    }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      color: var(--text-dark);
+      line-height: 1.5;
+      background-color: var(--white);
+      scroll-behavior: smooth;
+    }
+    .skip-link {
+      position: absolute;
+      top: -3rem;
+      left: 1rem;
+      background: var(--primary);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 0 0 0.5rem 0.5rem;
+      transition: top 0.2s;
+      z-index: 200;
+    }
+    .skip-link:focus {
+      top: 0;
+      outline: 3px solid var(--accent);
+    }
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1.2rem;
+    }
+    section {
+      padding: 4rem 0;
+      scroll-margin-top: 5rem;
+    }
+    section:nth-child(even) {
+      background-color: var(--gray-bg);
+    }
+    h2 {
+      font-size: 2.2rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: var(--primary);
+      margin-bottom: 2rem;
+      border-left: 6px solid var(--accent);
+      padding-left: 1.2rem;
+    }
+    h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: var(--text-soft);
+    }
+    .site-header {
+      background: var(--white);
+      box-shadow: 0 4px 12px rgba(0,51,102,0.08);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 0.6rem 0;
+    }
+    .header-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .logo a {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-decoration: none;
+      letter-spacing: -0.02em;
+    }
+    .logo span {
+      color: var(--accent);
+    }
+    .logo small {
+      font-size: 0.9rem;
+      font-weight: 400;
+      display: block;
+      color: var(--text-soft);
+      line-height: 1.2;
+    }
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1.2rem;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 500;
+      color: var(--text-soft);
+      padding: 0.4rem 0;
+      border-bottom: 2px solid transparent;
+    }
+    .nav-links a:hover,
+    .nav-links a:focus-visible {
+      border-bottom-color: var(--accent);
+      color: var(--primary);
+    }
+    .search-box {
+      display: flex;
+      align-items: center;
+      background: var(--gray-bg);
+      border-radius: 2rem;
+      padding: 0.4rem 0.8rem 0.4rem 1.2rem;
+      border: 1px solid #dde7f0;
+    }
+    .search-box input {
+      border: none;
+      background: transparent;
+      padding: 0.4rem 0.2rem;
+      font-size: 0.95rem;
+      min-width: 160px;
+      outline: none;
+    }
+    .search-box button {
+      background: none;
+      border: none;
+      color: var(--primary);
+      font-size: 1.1rem;
+      cursor: pointer;
+    }
+    .menu-toggle {
+      display: none;
+      background: transparent;
+      border: 1px solid var(--primary);
+      color: var(--primary);
+      font-size: 1.8rem;
+      padding: 0.2rem 0.8rem;
+      border-radius: 0.5rem;
+      cursor: pointer;
+    }
+    .hero {
+      background: linear-gradient(95deg, #002244 0%, #003366 80%), url('https://images.unsplash.com/photo-1594122230689-45899d9e6f69?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') no-repeat center/cover;
+      background-blend-mode: overlay;
+      color: white;
+      padding: 5rem 0;
+    }
+    .hero-content {
+      max-width: 700px;
+    }
+    .hero h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 0.5rem;
+    }
+    .hero .tagline {
+      font-size: 1.4rem;
+      margin-bottom: 2rem;
+      opacity: 0.95;
+    }
+    .cta-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    .btn {
+      display: inline-block;
+      background: var(--white);
+      color: var(--primary);
+      font-weight: 600;
+      padding: 0.85rem 2rem;
+      border-radius: 3rem;
+      text-decoration: none;
+      border: 2px solid transparent;
+      box-shadow: var(--shadow);
+    }
+    .btn-primary {
+      background: var(--accent);
+      color: #1e2b37;
+      border-color: var(--accent);
+    }
+    .btn-outline {
+      background: transparent;
+      border: 2px solid white;
+      color: white;
+      box-shadow: none;
+    }
+    .quick-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.8rem;
+      font-size: 1.1rem;
+    }
+    .quick-links a {
+      color: white;
+      text-decoration: underline 2px transparent;
+      font-weight: 500;
+    }
+    .quick-links a:hover {
+      text-decoration-color: var(--accent);
+    }
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .card {
+      background: var(--white);
+      border-radius: var(--border-radius);
+      padding: 1.5rem 1.2rem;
+      box-shadow: var(--shadow);
+      border: 1px solid #eef4f9;
+      transition: transform 0.2s;
+      cursor: pointer;
+    }
+    .card:hover {
+      transform: scale(1.02);
+    }
+    .card a {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+    .hod-message {
+      font-style: italic;
+      margin: 0.8rem 0 0;
+      padding-left: 0.8rem;
+      border-left: 4px solid var(--accent);
+      font-size: 0.95rem;
+    }
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+    .news-item, .event-item {
+      background: white;
+      padding: 1.2rem;
+      border-radius: 1rem;
+      margin-bottom: 1rem;
+      border-left: 4px solid var(--accent);
+    }
+    .contact-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+    .form-group {
+      margin-bottom: 1rem;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 1rem;
+      border: 1px solid #cbd5e1;
+      border-radius: 1rem;
+      font-family: inherit;
+    }
+    .map-placeholder {
+      background: #cbd5e1;
+      height: 220px;
+      border-radius: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #2d3e4f;
+      font-weight: 500;
+      margin: 1rem 0;
+      flex-direction: column;
+    }
+    footer {
+      background: var(--primary);
+      color: white;
+      padding: 2rem 0;
+      text-align: center;
+    }
+    .social-icons a {
+      color: white;
+      font-size: 1.6rem;
+      margin: 0 0.7rem;
+    }
+    .social-icons a:hover {
+      color: var(--accent);
+    }
+    .acc-statement {
+      font-size: 0.9rem;
+      margin-top: 1rem;
+      opacity: 0.9;
+    }
+    .staff-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 0.7rem 1.5rem;
+      background: white;
+      padding: 1.5rem;
+      border-radius: 1rem;
+      margin-top: 1rem;
+    }
+    .staff-item {
+      display: flex;
+      align-items: baseline;
+      gap: 0.5rem;
+    }
+    .staff-item i {
+      color: var(--primary);
+      width: 1.4rem;
+      font-size: 0.9rem;
+    }
+    hr {
+      border: 1px solid #dde7f0;
+      margin: 2rem 0 1rem;
+    }
+    .badge {
+      background: var(--accent);
+      color: #1e2b37;
+      padding: 0.2rem 0.8rem;
+      border-radius: 2rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .service-card {
+      background: white;
+      border-radius: 1.5rem;
+      padding: 2rem 1rem;
+      text-align: center;
+      box-shadow: var(--shadow);
+      border: 2px solid var(--primary-light);
+      transition: 0.2s;
+    }
+    .service-card:hover {
+      border-color: var(--accent);
+    }
+    .service-card i {
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+    .service-card a {
+      text-decoration: none;
+      color: var(--primary);
+      font-weight: 600;
+      font-size: 1.2rem;
+    }
+    /* search no result message */
+    #no-result {
+      text-align: center;
+      padding: 2rem;
+      font-size: 1.2rem;
+      color: var(--primary);
+      display: none;
+    }
+    /* modal overlay */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0,0,0,0.6);
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+    .modal-content {
+      background: white;
+      border-radius: 2rem;
+      max-width: 700px;
+      width: 90%;
+      max-height: 80vh;
+      overflow-y: auto;
+      padding: 2rem;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+      position: relative;
+    }
+    .modal-close {
+      position: absolute;
+      top: 1rem;
+      right: 1.5rem;
+      font-size: 2rem;
+      cursor: pointer;
+      color: var(--primary);
+    }
+    .modal-close:hover {
+      color: var(--accent);
+    }
+    .modal-content h4 {
+      font-size: 1.8rem;
+      color: var(--primary);
+      margin-bottom: 1rem;
+      border-left: 5px solid var(--accent);
+      padding-left: 1rem;
+    }
+    .modal-content ul, .modal-content p {
+      margin: 0.8rem 0;
+    }
+    .modal-content hr {
+      margin: 1.5rem 0;
+    }
+    @media (max-width: 900px) {
+      .nav-menu { gap: 1rem; }
+    }
+    @media (max-width: 750px) {
+      .menu-toggle { display: block; }
+      .nav-menu {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        background: white;
+        padding: 1rem 0;
+        display: none;
+      }
+      .nav-menu.show {
+        display: flex;
+      }
+      .nav-links {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.8rem;
+      }
+      .search-box {
+        width: 100%;
+        margin-top: 0.8rem;
+      }
+      .two-col, .contact-row {
+        grid-template-columns: 1fr;
+      }
+      .hero h1 { font-size: 2.2rem; }
+    }
+    :focus-visible {
+      outline: 3px solid var(--accent);
+      outline-offset: 4px;
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-row">
+      <div class="logo">
+        <a href="#home">GDC <span>(A)</span> Siddipet</a>
+        <small>Government Degree College (Autonomous), Siddipet</small>
+      </div>
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu" aria-expanded="false"><i class="fas fa-bars"></i></button>
+      <nav class="nav-menu" id="navMenu">
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#departments">Departments</a></li>
+          <li><a href="#programs">Programs</a></li>
+          <li><a href="#admissions">Admissions</a></li>
+          <li><a href="#faculty">Faculty</a></li>
+          <li><a href="#student-portal">Students</a></li>
+          <li><a href="#services">Online Services</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="search-box" id="searchForm">
+          <input type="search" id="searchInput" placeholder="Search departments..." aria-label="Search departments">
+          <button type="button" id="searchButton" aria-label="submit search"><i class="fas fa-search"></i></button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- HOME HERO -->
+    <section id="home">
+      <div class="hero">
+        <div class="container hero-content">
+          <h1>Government Degree College (Autonomous), Siddipet</h1>
+          <p class="tagline">Est. 1956 · Affiliated to Osmania University · NAAC Accredited</p>
+          <div class="cta-group">
+            <!-- Apply now goes to admissions -->
+            <a href="#admissions" class="btn btn-primary">Apply Now <i class="fas fa-arrow-right"></i></a>
+            <a href="#contact" class="btn btn-outline">Contact</a>
+            <!-- Campus tour opens Google Maps link in new tab -->
+            <a href="https://maps.app.goo.gl/KQT2SAGuWjJyqmgz9" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Campus Tour</a>
+          </div>
+          <div class="quick-links">
+            <a href="#programs">30+ Courses</a>
+            <a href="#student-portal">Student Portal</a>
+            <a href="#services">Hall Ticket / Results</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="container">
+        <h2>About the College</h2>
+        <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 2rem; align-items: start;">
+          <div>
+            <p style="font-size: 1.2rem;">Government Degree College (Autonomous), Siddipet, established in 1956, is spread over an <strong>18.29 acre campus</strong>. Affiliated to Osmania University, it offers 30+ UG and PG courses across Science, Arts, and Commerce. Accredited by NAAC, the college is known for academic excellence, modern labs, and a rich heritage.</p>
+            <p><strong>Mission:</strong> Empowering students through knowledge, innovation, and ethics.</p>
+            <p><strong>Vision:</strong> To be a centre of excellence in higher education and community engagement.</p>
+          </div>
+          <div style="background: var(--primary-light); padding: 1.8rem; border-radius: 2rem;">
+            <i class="fas fa-quote-left" style="font-size: 2rem; color: var(--primary); opacity: 0.4;"></i>
+            <p style="font-weight: 500; font-size: 1.2rem;">"We nurture critical thinking, research aptitude, and character. Every student is supported to realise their potential."</p>
+            <p style="margin-top: 1rem;"><strong>Dr. G. Sunitha</strong> <br> <small>Principal, GDC (A) Siddipet</small></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DEPARTMENTS (comprehensive) with IDs for search filtering -->
+    <section id="departments">
+      <div class="container">
+        <h2>Academic Departments</h2>
+        <p><span class="badge">15+ major departments</span></p>
+        <!-- Faculty of Sciences -->
+        <h3><i class="fas fa-flask"></i> Faculty of Sciences</h3>
+        <div class="card-grid" id="science-depts">
+          <div class="card" data-name="Physics"><h4>Physics</h4><p>M.Sc. Physics, advanced labs, research.</p><div class="hod-message">Dr. Ch. Madhusudhan</div></div>
+          <div class="card" data-name="Chemistry"><h4>Chemistry</h4><p>Organic, inorganic, physical.</p><div class="hod-message">Dr. K. Ravi Kumar</div></div>
+          <div class="card" data-name="Mathematics"><h4>Mathematics</h4><p>B.Sc., M.Sc. pure & applied.</p><div class="hod-message">Dr.D. Pavan Kumar</div></div>
+          <div class="card" data-name="Statistics"><h4>Statistics</h4><p>Data analytics, probability.</p><div class="hod-message">R. Ramya</div></div>
+          <div class="card" data-name="Botany"><h4>Botany</h4><p>Plant biology, conservation.</p><div class="hod-message">Dr.M. Srinivas</div></div>
+          <div class="card" data-name="Zoology"><h4>Zoology</h4><p>Animal physiology, biodiversity.</p><div class="hod-message">Dr. G. Vaikuntam</div></div>
+          <div class="card" data-name="Fisheries"><h4>Fisheries Science</h4><p>Aquaculture, fish biology.</p><div class="hod-message">Dr.T. Jagadeeshwara Chary</div></div>
+          <div class="card" data-name="Microbiology"><h4>Microbiology</h4><p>Microbes, immunology.</p><div class="hod-message">K. Sridevi</div></div>
+          <div class="card" data-name="Biotechnology"><h4>Biotechnology</h4><p>Genetic engineering, bioinformatics.</p><div class="hod-message">M. Venu</div></div>
+          <div class="card" data-name="Electronics"><h4>Electronics</h4><p>Circuit design, embedded systems.</p><div class="hod-message">Dr. A. Mahesh Kumar</div></div>
+          <div class="card" data-name="Computer Science"><h4>Computer Science</h4><p>AI/ML, Data Science, Cloud.</p><div class="hod-message">M. Maheshwari</div></div>
+          <div class="card" data-name="Food Science"><h4>Food Science</h4><p>Food tech, quality control.</p><div class="hod-message">Dr. P. Shilpa</div></div>
+        </div>
+
+        <!-- Faculty of Arts & Humanities -->
+        <h3><i class="fas fa-book"></i> Faculty of Arts & Humanities</h3>
+        <div class="card-grid" id="arts-depts">
+          <div class="card" data-name="Telugu"><h4>Telugu</h4><p>Modern Telugu literature, linguistics.</p><div class="hod-message">P. Das</div></div>
+          <div class="card" data-name="English"><h4>English</h4><p>Literature, communication.</p><div class="hod-message">Dr.J. Umamaheshwari</div></div>
+          <div class="card" data-name="Hindi"><h4>Hindi</h4><p>Hindi literature, functional Hindi.</p><div class="hod-message">Dr. Leelavathi Gopireddy</div></div>
+          <div class="card" data-name="Urdu"><h4>Urdu</h4><p>Urdu literature, functional.</p><div class="hod-message">Dr. Kaleem Mohiuddin</div></div>
+          <div class="card" data-name="History"><h4>History</h4><p>Indian history, heritage.</p><div class="hod-message">Dr. M. Srinivas</div></div>
+          <div class="card" data-name="Political Science"><h4>Political Science</h4><p>Political theory, IR.</p><div class="hod-message">Dr.N. Haribabu</div></div>
+          <div class="card" data-name="Economics"><h4>Economics</h4><p>Micro/macro, development.</p><div class="hod-message">Dr. A. Anuradha</div></div>
+          <div class="card" data-name="Public Administration"><h4>Public Administration</h4><p>Governance, policy.</p><div class="hod-message">V. Gurumurthy</div></div>
+        </div>
+
+        <!-- Faculty of Commerce & Management -->
+        <h3><i class="fas fa-chart-line"></i> Faculty of Commerce & Management</h3>
+        <div class="card-grid" id="commerce-depts">
+          <div class="card" data-name="Commerce General"><h4>Commerce (General)</h4><p>Accounting, finance, taxation.</p><div class="hod-message">Dr. Gopala Sudarshanam</div></div>
+          <div class="card" data-name="Commerce Computer Applications"><h4>Commerce (Computer Applications)</h4><p>Commerce with IT.</p><div class="hod-message">T. Shirisha</div></div>
+          <div class="card" data-name="Business Analytics"><h4>Business Analytics</h4><p>Data-driven decisions.</p><div class="hod-message">G. Jyothsna</div></div>
+          <div class="card" data-name="BBA"><h4>Business Administration (BBA)</h4><p>Management, marketing.</p><div class="hod-message">P. Swathi</div></div>
+          <div class="card" data-name="Marketing"><h4>Marketing</h4><p>Specialisation in commerce.</p><div class="hod-message">A. Gurucharandass</div></div>
+        </div>
+
+        <!-- Physical Education & Library -->
+        <h3><i class="fas fa-dumbbell"></i> Other Departments</h3>
+        <div class="card-grid" id="other-depts">
+          <div class="card" data-name="Physical Education"><h4>Physical Education</h4><p>Sports, fitness, yoga.</p><div class="hod-message">Dr. P. Ramesh</div></div>
+          <div class="card" data-name="Library"><h4>Library Science</h4><p>Central library, digital resources.</p><div class="hod-message">K. Durgavva</div></div>
+        </div>
+        <div id="no-result">No matching departments found.</div>
+      </div>
+    </section>
+
+    <!-- PROGRAMS & COURSES (detailed) -->
+    <section id="programs">
+      <div class="container">
+        <h2>Programs & Courses</h2>
+        <p><span class="badge">UG 3 years · PG 2 years · Distance options</span></p>
+        <div class="two-col">
+          <div>
+            <h3>🧑‍🎓 Undergraduate (UG)</h3>
+            <div class="card">
+              <h4>B.A (Bachelor of Arts)</h4>
+              <p><strong>Combinations:</strong> HEP (History, Economics, Political Science), HPCA (History, Public Admin, Computer Applications), HTP (History, Telugu, Political Science)</p>
+              <p>👉 Careers: civil services, teaching, govt jobs</p>
+            </div>
+            <div class="card">
+              <h4>B.Com (Bachelor of Commerce)</h4>
+              <p><strong>Specializations:</strong> General, Computer Applications, Business Analytics</p>
+              <p>👉 Careers: accounting, banking, CA/CS</p>
+            </div>
+            <div class="card">
+              <h4>B.Sc (Bachelor of Science)</h4>
+              <p><strong>Groups:</strong> MPC (Maths, Physics, Chemistry), BiPC (Botany, Zoology, Chemistry), MSCs (Maths, Statistics, Computer Science), Biotechnology / Microbiology</p>
+              <p>👉 Careers: science, IT, research, technical</p>
+            </div>
+          </div>
+          <div>
+            <h3>🎓 Postgraduate (PG)</h3>
+            <div class="card">
+              <h4>M.A (Master of Arts)</h4>
+              <p>Telugu, History, Economics, Political Science</p>
+            </div>
+            <div class="card">
+              <h4>M.Com (Master of Commerce)</h4>
+              <p>Advanced commerce & accounting</p>
+            </div>
+            <div class="card">
+              <h4>M.Sc (Master of Science)</h4>
+              <p>Physics, Chemistry, Botany, Zoology, Computer Science</p>
+            </div>
+            <h4 style="margin-top:1rem;">📚 Distance / Additional</h4>
+            <p>B.A, B.Com, B.Sc (Distance), B.Ed / Special Education, M.A (Distance – History etc.)</p>
+          </div>
+        </div>
+        <p style="margin-top:1.5rem;">✅ Total: <strong>30+ courses</strong> with multiple specializations</p>
+      </div>
+    </section>
+
+    <!-- ADMISSIONS (DOST / CPGET) -->
+    <section id="admissions">
+      <div class="container">
+        <h2>Admissions 2025-26</h2>
+        <div class="two-col">
+          <div>
+            <h3>🧑‍🎓 UG (B.A / B.Com / B.Sc)</h3>
+            <p><strong>Through DOST (Telangana)</strong></p>
+            <ul style="margin-left:1.5rem;">
+              <li>Register on DOST website</li>
+              <li>Fill personal & academic details</li>
+              <li>Choose college & course (web options)</li>
+              <li>Seat allotment (merit based – Intermediate marks)</li>
+              <li>Report to college for confirmation</li>
+            </ul>
+            <p><strong>Eligibility:</strong> Pass in 10+2 (any stream)</p>
+            <p><strong>Fee (approx):</strong> ₹3,000 – ₹10,000 per year</p>
+          </div>
+          <div>
+            <h3>🎓 PG (M.A / M.Com / M.Sc)</h3>
+            <p><strong>Through CPGET (Common PG Entrance Test)</strong></p>
+            <ul style="margin-left:1.5rem;">
+              <li>Apply for CPGET, write entrance exam</li>
+              <li>Attend counselling, choose this college</li>
+              <li>Seat allotment based on rank</li>
+            </ul>
+            <p><strong>Eligibility:</strong> Relevant Bachelor’s degree</p>
+            <p><strong>Fee (approx):</strong> ₹20,000 – ₹35,000 total</p>
+          </div>
+        </div>
+        <hr>
+        <div style="background: var(--primary-light); padding:1.5rem; border-radius:1rem; margin-top:1rem;">
+          <p><i class="fas fa-file-alt"></i> <strong>Documents required:</strong> SSC memo, Intermediate memo, Transfer Certificate, Aadhaar, Caste/Income (if applicable), photos.</p>
+          <p><i class="fas fa-clock"></i> <strong>Typical schedule:</strong> UG (DOST) May–July, PG (CPGET) June–August.</p>
+          <p><i class="fas fa-tag"></i> <strong>Reservation:</strong> As per Telangana government (SC/ST/BC/EWS, NCC/Sports/PH).</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FACULTY & STAFF (detailed lists) - kept as before -->
+    <section id="faculty">
+      <div class="container">
+        <h2>Faculty & Staff</h2>
+        <h3>📋 Teaching Staff (Regular)</h3>
+        <div class="staff-grid">
+          <div class="staff-item"><i class="fas fa-user"></i> Dr.G. Sunitha (Principal)</div>
+          <div class="staff-item"><i class="fas fa-user"></i> Dr.J. Umamaheshwari (English)</div>
+          <div class="staff-item"><i class="fas fa-user"></i> Dr.I. Jayanthi Nagamallika (English)</div>
+          <div class="staff-item"><i class="fas fa-user"></i> Dr.S. Anjani (English)</div>
+          <div class="staff-item"><i class="fas fa-user"></i> K. Krishnaiah (English)</div>
+          <div class="staff-item"><i class="fas fa-user"></i> M. Ramakrishna (English)</div>
+          <div class="staff-item"><i class="fas fa-user"></i> Dr.M. Srinivas (English)</div>
+          <div class="staff-item"><i class="fas fa-user"></i> G. Balakishan (English)</div>
+          <div class="staff-item"><i class="fas fa-user"></i> Dr.M. Sampath Kumar Reddy (English)</div>
+          <div class="staff-item"><i class="fas fa-user"></i> P. Das (Telugu)</div>
+          <div class="staff-item"><i class="fas fa-user"></i> N. Venkataramana (Telugu)</div>
+          <div class="staff-item"><i class="fas fa-user"></i> Dr. Leelavathi Gopireddy (Hindi)</div>
+          <div class="staff-item"><i class="fas fa-user"></i> Dr. Kaleem Mohiuddin (Urdu)</div>
+          <div class="staff-item"><i class="fas fa-user"></i> Dr.A. Anuradha (Economics)</div>
+          <div class="staff-item"><i class="fas fa-user"></i> Dr.M. Sraddanandam (Economics)</div>
+          <div class="staff-item"><i class="fas fa-user"></i> Dr.N. Haribabu (Political Science)</div>
+          <div class="staff-item"><i class="fas fa-user"></i> V. Gurumurthy (Public Admin)</div>
+          <div class="staff-item"><i class="fas fa-user"></i> A. Gurucharandass (Marketing)</div>
+          <div class="staff-item"><i class="fas fa-user"></i> Dr. Gopala Sudarshanam (Commerce)</div>
+          <div class="staff-item"><i class="fas fa-user"></i> Dr.T. Srinivas (Commerce)</div>
+          <div class="staff-item"><i class="fas fa-user"></i> Dr.D. Pavan Kumar (Mathematics)</div>
+          <div class="staff-item"><i class="fas fa-user"></i> M. Radhika (Mathematics)</div>
+          <div class="staff-item"><i class="fas fa-user"></i> Dr. Ch. Madhusudhan (Physics)</div>
+          <div class="staff-item"><i class="fas fa-user"></i> A. Rajani (Physics)</div>
+          <div class="staff-item"><i class="fas fa-user"></i> N. Satyanarayan Reddy (Physics)</div>
+          <div class="staff-item"><i class="fas fa-user"></i> B. Krishnaiah (Physics)</div>
+          <div class="staff-item"><i class="fas fa-user"></i> Dr.A. Mahesh Kumar (Physics)</div>
+        </div>
+        <!-- other faculty lists can be added similarly, but for brevity we keep as above -->
+      </div>
+    </section>
+
+    <!-- STUDENT PORTAL with clickable cards (Library, Labs, Calendar) -->
+    <section id="student-portal">
+      <div class="container">
+        <h2>Student Portal & Resources</h2>
+        <div class="card-grid" style="grid-template-columns:repeat(auto-fit,minmax(150px,1fr));">
+          <!-- Login card (non-functional for now) -->
+          <div class="card" id="login-card"><i class="fas fa-sign-in-alt fa-2x"></i> <h3>Login</h3></div>
+          <!-- Library card -->
+          <div class="card" id="library-card" data-info="library"><i class="fas fa-book-open fa-2x"></i> <h3>e‑Library</h3></div>
+          <!-- Labs card -->
+          <div class="card" id="labs-card" data-info="labs"><i class="fas fa-flask fa-2x"></i> <h3>Labs</h3></div>
+          <!-- Calendar card -->
+          <div class="card" id="calendar-card" data-info="calendar"><i class="fas fa-calendar-alt fa-2x"></i> <h3>Calendar</h3></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ONLINE SERVICES (hall ticket, fee, results) -->
+    <section id="services">
+      <div class="container">
+        <h2>🔗 Online Services</h2>
+        <div class="service-grid">
+          <div class="service-card">
+            <i class="fas fa-ticket-alt"></i>
+            <a href="https://exambranch.com/hallticket_gen.aspx?cc=6B6IlAtD/7GMucIpMgd2GA==" target="_blank" rel="noopener noreferrer">Hall Ticket Download</a>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-file-invoice"></i>
+            <a href="https://octopod.co.in/academy/payment/53547b780ac83bfa14590756e7931bc1" target="_blank" rel="noopener noreferrer">Fee & Receipts</a>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-scroll"></i>
+            <a href="https://exambranch.com/rpts/mm_htno.aspx?cc=6B6IlAtD/7GMucIpMgd2GA==" target="_blank" rel="noopener noreferrer">Marks & Memo Results</a>
+          </div>
+        </div>
+        <p style="text-align:center; margin-top:1.5rem;">⚠️ These are official external portals. Click to access your hall ticket, pay fees, or view results.</p>
+      </div>
+    </section>
+
+    <!-- NEWS (updated) -->
+    <section id="news">
+      <div class="container">
+        <h2>News & Events</h2>
+        <div class="news-item"><i class="fas fa-external-link-alt"></i> <strong>Revaluation Fee Payment Link</strong> for UG Sem‑I, III & V Nov/Dec‑2025 (Academic Year 2025‑26)</div>
+        <div class="news-item"><i class="fas fa-external-link-alt"></i> <strong>Results of UG Semester - I, III and V Nov/Dec‑2025</strong> for Academic year 2025‑26 released.</div>
+        <div class="news-item"><i class="fas fa-external-link-alt"></i> <strong>Revaluation Fee Notification</strong> for UG Semester‑I, III & V Nov/Dec‑2025.</div>
+        <div class="news-item"><i class="fas fa-envelope"></i> <strong>College Mail ID:</strong> prl-gdc-sdpt-ce@telangana.gov.in</div>
+        <div class="news-item"><i class="fas fa-chart-line"></i> <strong>UG Results Nov‑Dec 2024</strong> (Sem I, III & V Regular) 2024‑25 published.</div>
+        <div class="event-item" style="margin-top:1rem;"><span class="event-date">May 10:</span> Alumni meet 2025</div>
+        <div class="event-item"><span class="event-date">May 25:</span> Guest lecture on "Career in Data Science"</div>
+      </div>
+    </section>
+
+    <!-- CONTACT with detailed info -->
+    <section id="contact">
+      <div class="container">
+        <h2>Contact Us</h2>
+        <div class="contact-row">
+          <div>
+            <p><i class="fas fa-map-pin"></i> <strong>Address:</strong> Government Degree College (Autonomous), Near Ambedkar Nagar, Medak Road, Siddipet, Telangana – 502103</p>
+            <div class="map-placeholder">
+              <i class="fas fa-map-marked-alt fa-2x"></i> 
+              <p style="margin-top:0.5rem;">📍 Ambedkar Statue, opp. Government Hospital<br>🛺 10‑15 min from Siddipet bus stand</p>
+            </div>
+            <p><i class="fas fa-phone"></i> <strong>Phone:</strong> 08457 – 222110</p>
+            <p><i class="fas fa-envelope"></i> <strong>Email:</strong> prl-gdc-sdpt-ce@telangana.gov.in, gdcsiddipet@gmail.com</p>
+            <p><strong>Office hours:</strong> Mon–Sat, 10:00 AM – 5:00 PM</p>
+            <div class="social-icons" style="margin-top: 1rem;">
+              <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+              <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+          <div>
+            <form action="#" method="post">
+              <div class="form-group"><input type="text" placeholder="Your name" aria-label="Name" required></div>
+              <div class="form-group"><input type="email" placeholder="Email address" aria-label="Email" required></div>
+              <div class="form-group"><textarea rows="4" placeholder="Your message" aria-label="Message" required></textarea></div>
+              <button type="submit" class="btn btn-primary">Send enquiry</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal overlay for Library/Labs/Calendar info -->
+  <div class="modal-overlay" id="infoModal">
+    <div class="modal-content">
+      <span class="modal-close" id="modalClose">&times;</span>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container">
+      <div class="social-icons">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      </div>
+      <p style="margin: 1rem 0;">© 2025 Government Degree College (Autonomous), Siddipet. All rights reserved.</p>
+      <p class="acc-statement">📄 Accessibility statement: WCAG 2.1 AA compliant. HTTPS secure, Core Web Vitals optimized.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const toggle = document.getElementById('menuToggle');
+    const navMenu = document.getElementById('navMenu');
+    if (toggle && navMenu) {
+      toggle.addEventListener('click', () => {
+        const expanded = toggle.getAttribute('aria-expanded') === 'true' ? false : true;
+        navMenu.classList.toggle('show');
+        toggle.setAttribute('aria-expanded', expanded);
+      });
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth <= 750) {
+            navMenu.classList.remove('show');
+            toggle.setAttribute('aria-expanded', 'false');
+          }
+        });
+      });
+    }
+
+    // SEARCH FUNCTIONALITY (filter department cards)
+    const searchInput = document.getElementById('searchInput');
+    const searchButton = document.getElementById('searchButton');
+    const allDeptCards = document.querySelectorAll('#departments .card');
+    const noResultDiv = document.getElementById('no-result');
+
+    function filterCards() {
+      const query = searchInput.value.trim().toLowerCase();
+      let visibleCount = 0;
+
+      allDeptCards.forEach(card => {
+        const text = card.innerText.toLowerCase();
+        if (text.includes(query) || query === '') {
+          card.style.display = 'block';
+          visibleCount++;
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      if (visibleCount === 0 && query !== '') {
+        noResultDiv.style.display = 'block';
+      } else {
+        noResultDiv.style.display = 'none';
+      }
+    }
+
+    if (searchButton) {
+      searchButton.addEventListener('click', (e) => {
+        e.preventDefault();
+        filterCards();
+      });
+    }
+
+    if (searchInput) {
+      searchInput.addEventListener('keyup', (e) => {
+        if (e.key === 'Enter') {
+          e.preventDefault();
+          filterCards();
+        }
+      });
+    }
+
+    // MODAL functionality for Student Portal cards
+    const modal = document.getElementById('infoModal');
+    const modalBody = document.getElementById('modalBody');
+    const modalClose = document.getElementById('modalClose');
+
+    // Content for each card (as HTML)
+    const libraryContent = `
+      <h4>📘 Library Timings & Rules</h4>
+      <p><strong>⏰ Timings:</strong> Monday–Saturday, 9:30 AM – 5:00 PM (closed on Sundays & holidays). Extended during exams.</p>
+      <p><strong>🪪 How to Get a Library Card:</strong></p>
+      <ul><li>Take admission</li><li>Fill registration form</li><li>Submit admission proof/ID & photo</li><li>Get free card from librarian</li></ul>
+      <p><strong>📘 Book Issue Rules:</strong> 2–3 books for 7–15 days, renewal allowed, fine for late return. Reference books not for home.</p>
+      <p><strong>📖 Library Rules:</strong> Silence, carry ID, no food, no mobile, handle books carefully.</p>
+      <p><strong>💡 Tips:</strong> Arrive early for good seats, use reference section, ask librarian for competitive exam books.</p>
+    `;
+
+    const labsContent = `
+      <h4>🧪 Laboratories</h4>
+      <p><strong>🔬 Science Labs:</strong> Chemistry (organic/inorganic, safety), Physics (optics, electronics), Botany (microscopes, specimens), Zoology (specimens, dissection).</p>
+      <p><strong>💻 Computer Labs:</strong> Multiple labs with internet, used for B.Sc (Computers), B.Com (Computer Applications), PG courses.</p>
+      <p><strong>⚙️ Facilities:</strong> Well‑maintained equipment, regular practicals, lab assistants, safety measures.</p>
+      <p><strong>📋 Rules:</strong> Wear lab coat (science), follow safety, record observations, no misuse.</p>
+      <p><strong>👍 Overall:</strong> Good facilities for a government college, especially strong for B.Sc students.</p>
+    `;
+
+    const calendarContent = `
+      <h4>📅 Academic Calendar 2025-26 (Expected)</h4>
+      <p><strong>Odd Semester (1,3,5):</strong> Classes start June/July, mids Aug/Sept, exams Nov/Dec (confirmed).</p>
+      <p><strong>Even Semester (2,4,6):</strong> Classes Dec/Jan, mids Jan/Feb, exams March/April.</p>
+      <p><strong>Internal Exams:</strong> 2 mids + assignments + practicals.</p>
+      <p><strong>Holidays:</strong> Dasara (Oct), Sankranti (Jan), Summer (April–June).</p>
+      <p>⚠️ Autonomous college – exact dates on notice board / website. Latest: UG Nov/Dec 2025 exams done, results out.</p>
+    `;
+
+    // Open modal with appropriate content
+    document.getElementById('library-card').addEventListener('click', () => {
+      modalBody.innerHTML = libraryContent;
+      modal.style.display = 'flex';
+    });
+    document.getElementById('labs-card').addEventListener('click', () => {
+      modalBody.innerHTML = labsContent;
+      modal.style.display = 'flex';
+    });
+    document.getElementById('calendar-card').addEventListener('click', () => {
+      modalBody.innerHTML = calendarContent;
+      modal.style.display = 'flex';
+    });
+
+    // Close modal
+    function closeModal() {
+      modal.style.display = 'none';
+    }
+    modalClose.addEventListener('click', closeModal);
+    window.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.style.display === 'flex') closeModal();
+    });
+  </script>
+  <!-- structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollegeOrUniversity",
+    "name": "Government Degree College (Autonomous), Siddipet",
+    "url": "https://www.gdcsiddipet.ac.in",
+    "address": "Siddipet, Telangana, India",
+    "foundingDate": "1956"
+  }
+  </script>
+</body>
+</html>
